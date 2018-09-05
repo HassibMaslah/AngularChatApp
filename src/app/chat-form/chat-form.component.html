@@ -1,0 +1,21 @@
+<label>
+  <ng-template  #notcurrentUpload>
+    <input type="file" (change)="detectFiles($event)" class="inputFile" >
+  </ng-template>
+
+  <div *ngIf="currentUpload;else notcurrentUpload">
+        <div class="container">
+        <input type="file" (change)="detectFiles($event)" class="inputFile" *ngIf="currentUpload?.progress==100">
+        <div class="progress">
+        <div *ngIf="!(currentUpload?.progress==100)" class="bar" [ngStyle]="{ 'width': currentUpload?.progress + '%' }"> {{currentUpload?.progress}}%
+        </div>
+        </div>
+        </div>
+  </div>
+</label>
+
+<button [disabled]="!selectedFiles" (click)="uploadSingle()" class="chatButton">Upload</button>
+
+<!--img class="icons" src="../../assets/img/appelVideo.png" alt="Appel Video"  -->
+<input class="chatInput" [(ngModel)]="message" (keydown)="handleSubmit($event,recEmail)" (focus)="focusFunction()" placeholder="Enter your message..."/>
+<button class="chatButton" (click)=send()>Send</button>

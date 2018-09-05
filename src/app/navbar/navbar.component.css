@@ -1,0 +1,115 @@
+nav
+{
+	width: 100%;
+	background: #23232e;
+	padding: 0 50px;
+    box-sizing: border-box;
+    display:flex;
+    flex-direction: row;
+}
+nav h1
+{ 
+	margin: 0;
+    padding: 10px;
+    float: left;
+    font-weight: 5;
+}
+nav h1 a
+{
+	color: #fff;
+	text-decoration: none;
+}
+nav ul
+{
+	margin: 0;
+	padding: 0;
+    float: right;
+    padding-left: 800px;
+}
+nav ul li
+{
+	list-style: none;
+	display: inline-block;
+	padding: 20px;
+    transition: .4s;
+}
+nav ul li:hover
+{
+	background: #39a9d6;
+	transition: 1s all;
+	-webkit-transition: 1s all;
+	-moz-transition: 1s all;
+	-o-transition: 1s all;
+}
+nav ul li a
+{
+	color: #fff;
+	text-decoration: none;
+}
+
+#logo{
+    display: inline-block;
+    background: url('../../assets/img/logoBlanc.png') no-repeat;
+    background-size: cover;
+    margin: 2px 10px 12px 0px;
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+  }
+
+/*.navBar{
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+    background-color:#48aee0;
+}
+
+#logo{
+    display: inline-block;
+    background: url('../../assets/img/logoBlanc.png') no-repeat;
+    background-size: cover;
+    margin: 2px 10px 12px 0px;
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+}
+
+#heading{
+    flex: 4;
+    padding: 15px 12px 8px 10px;
+    height: 60px;
+    font-size: 1.8em;
+    font-family: sans-serif;
+}
+
+.links{
+    padding-top: 20px;
+    padding-right: 30px;
+    white-space: nowrap;
+    display: block;
+}
+
+#heading > a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding-top: 20px;
+}
+
+.links a{
+    color: #555;
+    text-decoration: none;
+    transition: ease-in 0.2s;
+    padding-right: 12px;
+    overflow: hidden;
+   
+}
+
+.links a:hover {
+    color: rgb(245, 245, 245);
+    transition: ease-in 0.2s;
+}
+
+#userEmail {
+    padding-right: 16px;
+    font-weight: bold;
+}*/

@@ -1,0 +1,11 @@
+<div class="feed">
+  <div *ngFor="let message of feed | async" class="message" scrollable>
+    <app-message [chatMessage]=message></app-message>
+  </div>
+  <div *ngFor="let file of fileUploads"  class="message">
+      <app-message-file [upload]=file></app-message-file>
+    <!--label>{{file.name}}</label>
+    <img src="{{file.url}}"/-->
+  </div>
+
+</div>

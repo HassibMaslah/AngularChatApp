@@ -1,0 +1,10 @@
+<button class="userItem" *ngIf="user.email != userEmail">
+  <span class="status" [ngClass]=(user.status)></span>
+  <!--span class="time">2:09 PM</span-->
+  <span class="userName">
+    {{user.displayName}}
+  </span><br>
+  <!--span class="content" *ngFor="let message of lastmessages | async">
+      {{message}}
+  </span-->
+</button>

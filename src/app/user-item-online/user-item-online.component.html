@@ -1,0 +1,8 @@
+<div class="userItem" (click)="goChatWith()" *ngIf="user.status=='online'">
+  <span class="status" [ngClass]=(user.status)></span>
+  <span id="country">{{user.country}}</span>
+  <span class="userName">
+    {{user.displayName}}
+  </span><br>
+
+</div>

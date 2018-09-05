@@ -1,0 +1,53 @@
+.userItem{
+    height: auto;
+    font-size: 18px;
+    position: relative;
+    width: 100%;
+    padding: 12px 10% 16px;
+    cursor: pointer;
+    background-color: #fff;  
+    color: #000;
+    border-top: 1px solid #e6e6e6;
+    border-bottom:  1px solid #e6e6e6;
+    
+  }
+  .userItem:hover{
+      background-color: #39a9d6;
+      color: #fff;
+      transition: ease-in 0.1s;
+  }
+  .userItem:focus {     
+    background-color: #39a9d6;
+      color: #fff;
+      transition: ease-in 0.1s;
+}
+  .time{
+    font-size: 14px;
+    position: absolute;
+    top: 16px;
+    right: 10%;
+    padding: 0 0 5px 5px;
+  }
+  .online{
+      background-color: #0FA;
+  }
+  
+  .busy{
+      background-color: #FB0;
+  }
+  
+  .offline{
+      background-color: #888;
+  }
+  
+  .status{
+      border: 1px solid black;
+      display: inline-block;
+      min-width: 10px;
+      min-height: 10px;
+      border-radius: 50%;
+      margin: 10px 12px 0px 10px;
+  } 
+  .userName{
+      display: inline-block;
+  }

@@ -1,0 +1,43 @@
+<div class="mainContent">
+  <div class="userListWrapper">
+    <app-user-list></app-user-list>
+  </div>
+  <div class="feedWrapper1" >
+      <div class="feedWrapper" #scroller>
+          <app-feed></app-feed>
+        </div>
+      <div class="userProfilWrapper" *ngIf="(user|async)?.uid">
+          <button (click)="toggleMenu()" [@slideBtnInOut]="BtnState" class="hamburger">
+            <span>toggle menu</span>
+          </button> 
+          <app-user-profil [@slideInOut]="menuState"  [upload]=file></app-user-profil>  
+          <!--app-user-profil *ngFor="let file of fileUploads " [@slideInOut]="menuState"  [upload]=file></app-user-profil-->  
+          <!--button (click)="toggleMenu()" class="hamburger">
+              <span>toggle menu</span>
+          </button--> 
+      </div>
+      
+</div>
+
+
+    
+  <!--ng-template  #userP>
+      <div class="userProfilWrapper">
+          <app-user-profil></app-user-profil>
+      </div>
+  </ng-templat>
+
+  <button *ngIf="click==false;else  userP" (click)="clicked()">Profile</button-->
+
+
+
+  <!--ng-template #otherContent>
+      <div #scroller class="feedWrapper" ></div>
+          
+        </div>
+  </ng-template-->
+  
+</div>
+<div class="chatFormWrapper" >
+  <app-chat-form></app-chat-form>
+</div>

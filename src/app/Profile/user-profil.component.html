@@ -1,0 +1,12 @@
+<div class="box">
+  <img src="../../assets/img/acc.png" alt="photo de profil" class="box-img">
+  <!--label class="label" {{fileURL}}>Profil Picture*</label>
+  <input type="file" (change)="detectFiles($event)" class="formInput">
+  <button [disabled]="!selectedFiles" (click)="uploadPP()" class="btn">Upload</button-->
+
+<h1>{{userName}}</h1>
+
+<input type="text" [(ngModel)]="name" class="formInput" placeholder="Edit Name...">
+<button class="btn" id="btn-edit" (click)="Edit()" (click)="name=''">Edit</button>
+</div>
+

@@ -1,0 +1,10 @@
+<div class="messageContainer" [ngClass]="{'isOwnMessageContainer':isOwnMessage}" >
+    <div class="messageData" [ngClass]="{'isOwnMessageData':isOwnMessage}">
+        <span class="sender" [ngClass]="{'isOwnSender':isOwnMessage}">
+            {{ userName }}
+        </span>
+    </div>
+    <div class="messageContent" [ngClass]="{'isOwnMessageContent':isOwnMessage}">
+            <img src="{{fileURL}}" [ngClass]="{'isOwnImg':isOwnMessage}"/>
+    </div>
+</div>

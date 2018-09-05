@@ -1,0 +1,31 @@
+<nav><!--Menu Bar-->
+  <a routerLink="/"><div id="logo"></div></a>
+  <h1 class="Brand"><a routerLink="/">LET'S <strong>CHAT</strong></a></h1>
+  <ul>
+    <li *ngIf="!(user|async)?.uid" class="log-popup"><a href="#" (click)="login()">Login</a></li>
+    <li *ngIf="!(user|async)?.uid" ><a routerLink="/signup">Sign Up</a></li>
+    <li *ngIf="(user|async)?.uid"><a href="#" (click)="logout()">Logout</a></li>
+  </ul>
+  <div style="clear: both"></div>
+
+</nav>
+
+
+<!--div class="navBar">
+    <a routerLink="/"><div id="logo"></div></a>
+    <div id="heading"><a routerLink="/">LET'S <strong>CHAT</strong></a></div>
+  <div class="links">
+    <span>
+      <a *ngIf="!(user|async)?.uid" href="#" (click)="login()">Login</a>
+    </span>
+    <span>
+      <a *ngIf="!(user|async)?.uid" routerLink="/signup">Sign Up</a>
+    </span>
+    <span>
+      <span id="userEmail" *ngIf="(user|async)?.uid">Hello, {{userEmail}}</span>
+    </span>
+    <span>
+      <a *ngIf="(user|async)?.uid" href="#" (click)="logout()">Logout</a>
+    </span>
+  </div>
+</div-->

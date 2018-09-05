@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="loginCard">
+    <h2 class="heading">Log In</h2>
+      <input [(ngModel)]="email" type="email" name="email" class="formInput" placeholder="Email..."/>
+      <input type="password" [(ngModel)]="password" name="password" class="formInput"  (keydown)="handleSubmit($event)" placeholder="Password..."/>
+      <button class="btn" id="btn-login" (click)="login()">
+              LOG IN
+      </button>
+  </div>
+  <div class="userList">
+    <h2 class="heading2">Users Online</h2>
+    <app-user-item-online
+    [user]=user *ngFor="let user of users">
+    </app-user-item-online>
+  </div>
+</div>
+
+

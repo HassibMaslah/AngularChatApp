@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Let's Chat</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link href="https://fonts.googleapis.com/css?family=Droid+Sans|Open+Sans|Roboto" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/web-animations/2.2.2/web-animations.min.js"></script>
+  <script src="http://cdn.peerjs.com/0.3/peer.js"></script>
+  
+<script type="text/javascript">
+
+function surligne(champ, erreur)
+{
+   if(erreur){
+      champ.style.borderColor = "#ff1a1a";
+    }
+   else
+      champ.style.borderColor = "";
+}
+function verifForm(f)
+{
+   var paswdOk = verifPassword(f.password);
+   var mailOk = verifMail(f.email);
+   //var countryOk = verifCountry(f.country);
+   var nameOk = verifName(f.displayName);
+   
+   if(paswdOk && mailOk && nameOk)
+      return true;
+   else
+   {
+      alert("Error: You should fill all field correctly !");
+      return false;
+   }
+}
+
+//===================verif email=========================
+
+function verifMail(champ)
+{
+   var regex = /^[a-zA-Z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$/;
+   if(!regex.test(champ.value))
+   {
+      surligne(champ, true);
+      return false;
+   }
+   else
+   {
+      surligne(champ, false);
+      return true;
+   }
+}
+
+//===================verif name=========================
+
+function verifName(champ)
+{
+   if(champ.value.length < 2 || champ.value.length > 25)
+   {
+      surligne(champ, true);
+      return false;
+   }
+   else
+   {
+      surligne(champ, false);
+      return true;
+   }
+}
+
+//===================verif password=========================
+
+function verifPassword(champ)
+{
+  re = /[0-9]/;
+  if(!re.test(champ.value)) {
+    surligne(champ, true);
+    return false;
+  }
+  else
+   {
+      surligne(champ, false);
+      return true;
+   } 
+  re = /[a-z]/;
+  if(!re.test(champ.value)) {
+    surligne(champ, true);
+    return false;
+  }
+  else
+   {
+      surligne(champ, false);
+      return true;
+   } 
+  re = /[A-Z]/;
+  if(!re.test(champ.value)) {
+    surligne(champ, true);
+    return false;
+  }
+  else
+   {
+      surligne(champ, false);
+      return true;
+   } 
+}
+  </script>
+</head>
+<body>
+  <app-root></app-root>
+</body>
+</html>
